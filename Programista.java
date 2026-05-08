@@ -1,16 +1,16 @@
 public class Programista extends Pracownik {
 
-    private String glownyJezyk;
+    private String mainLang;
     private int liczbaRepozytoriow;
 
-    public Programista(String idPracownika, String imie, String nazwisko, double stawkaBazowa, String glownyJezyk, int liczbaRepozytoriow) {
-        super(idPracownika, imie, nazwisko, stawkaBazowa);
-        this.glownyJezyk = glownyJezyk;
+    public Programista(String Id, String name, String surname, double BaseSalary, String mainLang, int liczbaRepozytoriow) {
+        super(Id, name, surname, BaseSalary);
+        this.mainLang = mainLang;
         this.liczbaRepozytoriow = liczbaRepozytoriow;
     }
 
     public String Technologia(){
-        return String.format("Główny język programowania: %s", glownyJezyk);
+        return String.format("Główny język programowania: %s", mainLang);
     }
 
     @Override
@@ -21,7 +21,7 @@ public class Programista extends Pracownik {
     @Override
     public String Opis(){
         return String.format("Programista: %s %s, ID: %s, Stawka bazowa: %.2f, Główny język: %s, Liczba repozytoriów: %d",
-                getImie(), getNazwisko(), getIdPracownika(), getStawkaBazowa(), glownyJezyk, liczbaRepozytoriow);
+                getName(), getSurname(), getId(), getBaseSalary(), mainLang, liczbaRepozytoriow);
     }
 
     @Override

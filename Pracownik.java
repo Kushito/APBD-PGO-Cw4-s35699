@@ -1,52 +1,52 @@
 public class Pracownik {
-    private String idPracownika;
-    private String imie;
-    private String nazwisko;
-    private double stawkaBazowa;
+    private String Id;
+    private String name;
+    private String surname;
+    private double BaseSalary;
 
-    public Pracownik(String idPracownika, String imie, String nazwisko, double stawkaBazowa) {
-        this.idPracownika = idPracownika;
-        this.imie = imie;
-        this.nazwisko = nazwisko;
-        this.stawkaBazowa = stawkaBazowa;
+    public Pracownik(String Id, String name, String surname, double BaseSalary) {
+        this.Id = Id;
+        this.name = name;
+        this.surname = surname;
+        this.BaseSalary = BaseSalary;
     }
 
     // Getters and setters
-    public String getIdPracownika() {
-        return idPracownika;
+    public String getId() {
+        return Id;
     }
-    public void setIdPracownika(String idPracownika) {
-        this.idPracownika = idPracownika;
+    public void setId(String Id) {
+        this.Id = Id;
     }
-    public String getImie() {
-        return imie;
+    public String getName() {
+        return name;
     }
-    public void setImie(String imie) {
-        this.imie = imie;
+    public void setName(String name) {
+        this.name = name;
     }
-    public String getNazwisko() {
-        return nazwisko;
+    public String getSurname() {
+        return surname;
     }
-    public void setNazwisko(String nazwisko) {
-        this.nazwisko = nazwisko;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
-    public double getStawkaBazowa() {
-        return stawkaBazowa;
+    public double getBaseSalary() {
+        return BaseSalary;
     }
-    public void setStawkaBazowa(double stawkaBazowa) {
-        this.stawkaBazowa = stawkaBazowa;
+    public void setBaseSalary(double BaseSalary) {
+        this.BaseSalary = BaseSalary;
     }
 
     public final String pobierzIdPracownika() {
-        return String.format("ID: %s", idPracownika);
+        return String.format("ID: %s", Id);
     }
 
     public double obliczWynagrodzenie() {
-        return stawkaBazowa;
+        return BaseSalary;
     }
 
     public String Opis(){
-        return String.format("Pracownik: %s %s, ID: %s, Stawka bazowa: %.2f", imie, nazwisko, idPracownika, stawkaBazowa);
+        return String.format("Pracownik: %s %s, ID: %s, Stawka bazowa: %.2f", name, surname, Id, BaseSalary);
     }
 
     @Override
@@ -59,7 +59,7 @@ public class Pracownik {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         Pracownik pracownik = (Pracownik) obj;
-        return idPracownika.equals(pracownik.idPracownika);
+        return Id.equals(pracownik.Id);
     }
 
 }
